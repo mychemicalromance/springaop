@@ -1,4 +1,5 @@
-package com.example.springaop;
+/*
+package com.example.springaop.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -38,3 +39,4 @@ public class KafkaProducerConfig {
     }
 
 }
+*/

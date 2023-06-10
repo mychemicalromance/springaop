@@ -1,4 +1,5 @@
-package com.example.springaop;
+/*
+package com.example.springaop.kafka;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -11,4 +12,4 @@ public class KafkaConsumer {
         System.out.println("Received message: " + message);
     }
 
-}
+}*/
