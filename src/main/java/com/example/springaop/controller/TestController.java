@@ -1,5 +1,7 @@
 package com.example.springaop.controller;
 
+import com.example.springaop.aop.ServiceA;
+import com.example.springaop.aop.ServiceB;
 import com.example.springaop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,12 @@ public class TestController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    ServiceA serviceA;
+
+    @Autowired
+    ServiceB serviceB;
 
 
     @RequestMapping("list")
@@ -25,4 +33,17 @@ public class TestController {
         userService.save();
         return "aa";
     }
+
+    @RequestMapping("service")
+    public Object service(){
+        serviceA.transaction();
+        serviceB.test();
+        return "hello";
+    }
+
+    @RequestMapping("private")
+    public Object priv(){
+        return "1";
+    }
+
 }
